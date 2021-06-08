@@ -1,0 +1,221 @@
+/*  VISUALISATION DES BLOCS  */
+
+/*div, header, section, article, aside, nav {
+	border: 1px dashed rgba(0,0,0,0.15);
+	background-color: rgba(0,0,0,0.05);
+}*/
+
+/*.clear {
+	border: 1px dashed red;
+}*/
+
+/*GLOBAL */
+
+@font-face {
+    font-family: "Bodega Sans";
+    src: url("../fonts/BodegaSans_Black.ttf");
+}
+
+body {
+	margin: 0;
+	color: #444444;
+	font-family: "Bodega Sans";
+	font-size: 1.6rem;
+	background-image: url("../img/bg_body.svg");
+}
+
+a {
+	text-decoration: none;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 1500px;
+	padding-left: 50px;
+	padding-right: 50px;
+	background-color: #444444;
+}
+
+h1, h2, h3 {
+	font-family: "Bodega Sans";
+	font-weight: normal;
+	margin: 0;
+	background-color: #444444;
+	color: white;
+}
+h1{
+	text-transform: uppercase;
+}
+
+
+/* HEADER */
+header {
+	/*background : linear-gradient(45deg, white 0 50%, black 50% 100%);*/
+	background: linear-gradient(130deg, white 0%, white 50%, #333 50%, #333 100%);
+	box-shadow: 0 0 25px rgba(0,0,0,0.2);
+	border-top: 5px solid;
+	border-bottom: 5px solid #000000;
+}
+
+header nav{
+	padding: 25px;
+	font-family: "Bodega Sans";
+	text-align: right;
+	font-size: 2.5rem;
+}
+
+header nav a{
+	display: block;
+	padding: 10px;
+	color: white;
+}
+
+header nav a:hover {
+	color: #FF9D00;
+}
+
+#logo {
+	float: left;
+}
+
+/* CONTENT */
+/* CTA = Call To Action */
+.cta {
+	font-family: "Slabo 27px";
+	font-size: 1.1em;
+	color: white;
+	background-color: #FF9D00;
+	padding: 5px 15px;
+	margin-top: 15px;
+	display: block;
+}
+/*main*/
+#video{
+	background-color: #444444;
+	padding: 10px;
+	margin: 50px auto 0;
+	box-shadow: 0 0 25px rgba(0,0,0,0.2);
+}
+/* Rubrique Recette */
+#decouvre {
+	display: flex;
+	flex-direction: row;
+	vertical-align: top;
+	background-color:white;
+	justify-content: space-around;
+}
+
+#decouvre h2 {
+	font-size: 3.5em;
+	text-align: center;
+	background-color: white;
+	color: #FF9D00;
+	border-bottom: 5px solid #FF9D00;;
+}
+
+#decouvre h2 span {
+}
+
+#decouvre h3 {
+	text-align: center;
+	font-size: 1.8em;
+}
+
+#decouvre h3 i {
+	margin: 0 5px;
+	font-size: 0.8em;
+}
+
+#decouvre article {
+	width: 20%;
+	vertical-align: top;
+	padding: 2.5%;
+	border: 10px solid  #444444;;
+}
+
+#decouvre img {
+	margin-right: 5px;
+	max-width: 100%;
+	display: block;
+}
+
+span{
+	color: #FF9D00;
+}
+
+.video video {
+	width: 100%;
+	margin: 0 auto;
+	box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+}
+
+/* Rubrique Evenement */
+aside {
+	display: flex;
+	flex-direction: row;
+	color: white;
+	align-content: space-between;
+}
+
+aside h2 {
+	font-size: 1.4em;
+}
+
+aside span {
+	color: #B6DFDD;
+}
+
+aside a {
+	color: #B6DFDD;
+}
+
+aside article{
+	width: 50%;
+	background-color: #444444;
+	padding: 10px;
+}
+
+.vid{
+	object-fit: cover;
+}
+
+footer{
+	text-align: center;
+	background-color: rgba(0,0,0,0.50);
+}
+
+footer nav{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 960px) {
+	header nav a {
+		padding: 15px;
+	}
+	#tagline {
+		padding: 50px 25px;
+	}
+	header nav, .flex, footer nav {
+		-ms-flex-direction: column;
+		    -webkit-box-orient: vertical;
+		    -webkit-box-direction: normal;
+		        flex-direction: column;
+	}
+
+	#decouvre{
+		flex-direction: column;
+	}
+	.mutualise article,
+	#decouvre article,
+	aside article {
+		-webkit-align-self: stretch;
+		    -ms-flex-item-align: stretch;
+		            -ms-grid-row-align: stretch;
+		        align-self: stretch;
+	}
+
+
+
